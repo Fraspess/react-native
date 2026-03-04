@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\Migrations\\20260304154939_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WEB_API.DAL\\Migrations\\20260304154939_start.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\coder\\downloads\\reactnative\\backend\\pd421_web_api\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04326E86-567D-46BA-A24F-B31726B750D8}|WEB_API.DAL\\WEB_API.DAL.csproj|c:\\users\\coder\\downloads\\reactnative\\backend\\pd421_web_api\\web_api.dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04326E86-567D-46BA-A24F-B31726B750D8}|WEB_API.DAL\\WEB_API.DAL.csproj|solutionrelative:web_api.dal\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\coder\\downloads\\reactnative\\backend\\pd421_web_api\\web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04326E86-567D-46BA-A24F-B31726B750D8}|WEB_API.DAL\\WEB_API.DAL.csproj|c:\\users\\coder\\downloads\\reactnative\\backend\\pd421_web_api\\web_api.dal\\web_api.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{04326E86-567D-46BA-A24F-B31726B750D8}|WEB_API.DAL\\WEB_API.DAL.csproj|solutionrelative:web_api.dal\\web_api.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\coder\\downloads\\reactnative\\backend\\pd421_web_api\\web_api.bll\\web_api.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\web_api.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20260304154939_start.cs",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\Migrations\\20260304154939_start.cs",
+              "RelativeDocumentMoniker": "WEB_API.DAL\\Migrations\\20260304154939_start.cs",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\Migrations\\20260304154939_start.cs",
+              "RelativeToolTip": "WEB_API.DAL\\Migrations\\20260304154939_start.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:49:39.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WEB_API.BLL",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.BLL\\WEB_API.BLL.csproj",
+              "RelativeDocumentMoniker": "WEB_API.BLL\\WEB_API.BLL.csproj",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.BLL\\WEB_API.BLL.csproj",
+              "RelativeToolTip": "WEB_API.BLL\\WEB_API.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-04T15:39:21.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "WEB_API.DAL",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\WEB_API.DAL.csproj",
+              "RelativeDocumentMoniker": "WEB_API.DAL\\WEB_API.DAL.csproj",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\WEB_API.DAL.csproj",
+              "RelativeToolTip": "WEB_API.DAL\\WEB_API.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-04T15:39:53.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API\\appsettings.json",
+              "RelativeDocumentMoniker": "WEB_API\\appsettings.json",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API\\appsettings.json",
+              "RelativeToolTip": "WEB_API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-04T15:25:10.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API\\Program.cs",
+              "RelativeDocumentMoniker": "WEB_API\\Program.cs",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API\\Program.cs",
+              "RelativeToolTip": "WEB_API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:22:55.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "WEB_API.DAL\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\CODER\\Downloads\\reactNative\\backend\\PD421_WEB_API\\WEB_API.DAL\\AppDbContext.cs",
+              "RelativeToolTip": "WEB_API.DAL\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-04T15:22:47.898Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

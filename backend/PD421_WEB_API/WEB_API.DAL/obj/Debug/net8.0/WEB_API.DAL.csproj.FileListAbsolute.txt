@@ -1,0 +1,14 @@
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\bin\Debug\net8.0\WEB_API.DAL.deps.json
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\bin\Debug\net8.0\WEB_API.DAL.runtimeconfig.json
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\bin\Debug\net8.0\WEB_API.DAL.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\bin\Debug\net8.0\WEB_API.DAL.pdb
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.csproj.AssemblyReference.cache
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.AssemblyInfoInputs.cache
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.AssemblyInfo.cs
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.csproj.CoreCompileInputs.cache
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\refint\WEB_API.DAL.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.pdb
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.genruntimeconfig.cache
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\ref\WEB_API.DAL.dll
