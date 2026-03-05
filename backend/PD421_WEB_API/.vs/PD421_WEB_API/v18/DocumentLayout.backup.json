@@ -42,9 +42,9 @@
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WEB_API\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Properties\\launchSettings.json",
-              "RelativeToolTip": "WEB_API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Properties\\launchSettings.json*",
+              "RelativeToolTip": "WEB_API\\Properties\\launchSettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-03-04T21:48:04.496Z",
               "EditorCaption": ""
@@ -59,8 +59,7 @@
               "RelativeToolTip": "WEB_API\\Program.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAC4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T21:02:12.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T21:02:12.708Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:59:05.373Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T20:59:05.373Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\CategoryService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:58:48.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T20:58:48.318Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:56:46.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T20:56:46.913Z"
             }
           ]
         }

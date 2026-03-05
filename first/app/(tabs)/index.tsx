@@ -12,7 +12,7 @@ export default function HomeScreen() {
 
     useEffect(() => {
         console.log('fetching...');
-        fetch("http://192.168.50.242:5240/api/categories")
+        fetch("https://unbated-shara-extrovertively.ngrok-free.dev/api/categories")
             .then((response) => {
                 return response.json();
             })
