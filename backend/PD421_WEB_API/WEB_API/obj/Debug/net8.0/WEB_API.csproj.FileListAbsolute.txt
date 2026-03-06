@@ -267,3 +267,11 @@ C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\bin\Debug
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\WEB_API.sourcelink.json

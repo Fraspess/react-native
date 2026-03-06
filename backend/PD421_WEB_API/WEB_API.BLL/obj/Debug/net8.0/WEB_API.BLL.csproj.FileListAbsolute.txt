@@ -29,3 +29,4 @@ C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.BLL\obj\D
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.BLL\obj\Debug\net8.0\refint\WEB_API.BLL.dll
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.BLL\obj\Debug\net8.0\WEB_API.BLL.pdb
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.BLL\obj\Debug\net8.0\ref\WEB_API.BLL.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.BLL\obj\Debug\net8.0\WEB_API.BLL.sourcelink.json

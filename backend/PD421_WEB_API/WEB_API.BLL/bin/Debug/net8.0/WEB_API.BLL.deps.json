@@ -70,7 +70,8 @@
       },
       "Microsoft.AspNetCore.Http.Abstractions/2.3.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Features": "2.3.0"
+          "Microsoft.AspNetCore.Http.Features": "2.3.0",
+          "System.Text.Encodings.Web": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Http.Abstractions.dll": {
@@ -92,7 +93,8 @@
       },
       "Microsoft.AspNetCore.WebUtilities/2.3.0": {
         "dependencies": {
-          "Microsoft.Net.Http.Headers": "2.3.8"
+          "Microsoft.Net.Http.Headers": "2.3.8",
+          "System.Text.Encodings.Web": "8.0.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {
@@ -104,6 +106,7 @@
       "Microsoft.EntityFrameworkCore/8.0.24": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "8.0.24",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.24",
           "Microsoft.Extensions.Caching.Memory": "8.0.1",
           "Microsoft.Extensions.Logging": "8.0.1"
         },
@@ -122,6 +125,7 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.24": {},
       "Microsoft.EntityFrameworkCore.Relational/8.0.22": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.24",
@@ -416,7 +420,8 @@
       },
       "Microsoft.Net.Http.Headers/2.3.8": {
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "10.0.0"
+          "Microsoft.Extensions.Primitives": "10.0.0",
+          "System.Buffers": "4.6.0"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {
@@ -522,6 +527,7 @@
           }
         }
       },
+      "System.Buffers/4.6.0": {},
       "System.Diagnostics.DiagnosticSource/10.0.0": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -530,6 +536,7 @@
           }
         }
       },
+      "System.Text.Encodings.Web/8.0.0": {},
       "WEB_API.DAL/1.0.0": {
         "dependencies": {
           "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": "13.1.2",
@@ -605,6 +612,13 @@
       "sha512": "sha512-epzWc4RnG6aQS+MfIK1gg1XbL8ZTYgKtW8L1lDVHG4C3nilLd6tX8moX6Sv8sXQkH/tMhWhT2e4Nm811kYeoxg==",
       "path": "microsoft.entityframeworkcore.abstractions/8.0.24",
       "hashPath": "microsoft.entityframeworkcore.abstractions.8.0.24.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nuMx9iCGkZgHvPKlnrYBjlxRgy8VDe443H0PbiDUvxQ8+4nC5JYhqQ9u5lg+FssnTh+QyvwVVVHvkCyAnrpajA==",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.24",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.8.0.24.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/8.0.22": {
       "type": "package",
@@ -844,12 +858,26 @@
       "path": "opentelemetry.extensions.hosting/1.14.0",
       "hashPath": "opentelemetry.extensions.hosting.1.14.0.nupkg.sha512"
     },
+    "System.Buffers/4.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
+      "path": "system.buffers/4.6.0",
+      "hashPath": "system.buffers.4.6.0.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/10.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-0KdBK+h7G13PuOSC2R/DalAoFMvdYMznvGRuICtkdcUMXgl/gYXsG6z4yUvTxHSMACorWgHCU1Faq0KUHU6yAQ==",
       "path": "system.diagnostics.diagnosticsource/10.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.10.0.0.nupkg.sha512"
+    },
+    "System.Text.Encodings.Web/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yev/k9GHAEGx2Rg3/tU6MQh4HGBXJs70y7j1LaM1i/ER9po+6nnQ6RRqTJn1E7Xu0fbIFK80Nh5EoODxrbxwBQ==",
+      "path": "system.text.encodings.web/8.0.0",
+      "hashPath": "system.text.encodings.web.8.0.0.nupkg.sha512"
     },
     "WEB_API.DAL/1.0.0": {
       "type": "project",

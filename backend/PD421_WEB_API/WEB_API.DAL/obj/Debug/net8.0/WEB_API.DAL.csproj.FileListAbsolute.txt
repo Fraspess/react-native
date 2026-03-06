@@ -27,3 +27,4 @@ C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.DAL\obj\D
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.pdb
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.genruntimeconfig.cache
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\ref\WEB_API.DAL.dll
+C:\Users\CODER\Downloads\reactNative\backend\PD421_WEB_API\WEB_API.DAL\obj\Debug\net8.0\WEB_API.DAL.sourcelink.json

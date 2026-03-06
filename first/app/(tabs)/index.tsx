@@ -12,7 +12,7 @@ export default function HomeScreen() {
 
     useEffect(() => {
         console.log('fetching...');
-        fetch("https://unbated-shara-extrovertively.ngrok-free.dev/api/categories")
+        fetch("https://pd421.itstep.click/api/categories")
             .then((response) => {
                 return response.json();
             })
@@ -45,8 +45,7 @@ export default function HomeScreen() {
             <ThemedView style={styles.stepContainer}>
                 <ThemedText type="subtitle">Step 1: Try it</ThemedText>
                 <ThemedText>
-                    Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-                    Press{' '}
+                   <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>
                     <ThemedText type="defaultSemiBold">
                         {Platform.select({
                             ios: 'cmd + d',
