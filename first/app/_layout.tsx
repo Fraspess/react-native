@@ -5,8 +5,7 @@ import 'react-native-reanimated';
 import "@/global.css";
 
 import {useColorScheme} from '@/hooks/use-color-scheme';
-import {Head} from "expo-router/build/head/ExpoHead.android";
-import Provider = Head.Provider;
+import { Provider } from 'react-redux'
 import {store} from "@/store/store";
 
 export const unstable_settings = {

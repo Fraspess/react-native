@@ -1,15 +1,18 @@
 // Need to use the React-specific entry point to import createApi
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import {BaseQueryMeta, createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import {ICategoryResponse} from "@/types/ICategoryResponse";
 import {BASE_URL} from "@/constants/urls";
+import {BaseQueryError} from "@reduxjs/toolkit/query";
 
 // Define a service using a base URL and expected endpoints
+
 export const categoryApi = createApi({
     reducerPath: 'categoryApi',
-    baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
+    baseQuery: fetchBaseQuery({ baseUrl: BASE_URL + '/api' }),
     endpoints: (builder) => ({
-        getCategories: builder.query<ICategoryResponse, void>({
-            query: () => `/`,
+        getCategories: builder.query<ICategoryResponse[], void>({
+            query:() => '/categories',
+            transformResponse: (response: {data: ICategoryResponse}) => response.data
         }),
     }),
 })
