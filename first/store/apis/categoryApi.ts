@@ -14,10 +14,17 @@ export const categoryApi = createApi({
             query:() => '/categories',
             transformResponse: (response: {data: ICategoryResponse}) => response.data
         }),
+        createCategory: builder.mutation<void, FormData>({
+            query:(formData) => ({
+                url: "/categories",
+                method: 'POST',
+                body: formData,
+            })
+        })
     }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
 
-export const { useGetCategoriesQuery } = categoryApi
+export const { useGetCategoriesQuery, useCreateCategoryMutation } = categoryApi

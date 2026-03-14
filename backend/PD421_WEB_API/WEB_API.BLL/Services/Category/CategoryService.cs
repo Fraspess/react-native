@@ -29,12 +29,23 @@ namespace WEB_API.BLL.Services.Categories
                 var imagePath = await _storageService.SaveImageAsync(dto.Image,contentRootPath);
                 if(imagePath == null)
                 {
-                    return new ServerResponse { Message = "Сталася помилка при збереженні картинки", IsSuccess = false };
+                    return new ServerResponse { Message = "Сталася помилка при збереженні картинки", IsSuccess = false, HttpStatusCode = System.Net.HttpStatusCode.BadRequest };
                 }
                 entity.Image = imagePath;
             }
             await _categoryRepository.CreateAsync(entity);
             return new ServerResponse { Message = "Успішно створено категорію", IsSuccess = true };
+        }
+
+        public async Task<ServerResponse> Delete(string id)
+        {
+            var entity = await _categoryRepository.GetByIdAsync(id);
+            if(entity == null)
+            {
+                return new ServerResponse { Message = "Категорія не знайдена", IsSuccess = false, HttpStatusCode = System.Net.HttpStatusCode.NotFound };
+            }
+            await _categoryRepository.DeleteAsync(entity);
+            return new ServerResponse { Message = "Успішно видалено категорію", IsSuccess = true };
         }
 
         public async Task<ServerResponse> GetAll()

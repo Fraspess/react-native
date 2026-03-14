@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api.bll\\services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api.bll\\services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F04DC15-6F49-4DAD-907C-E34AE28CB47E}|WEB_API.BLL\\WEB_API.BLL.csproj|solutionrelative:web_api.bll\\services\\storage\\storageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api\\controllers\\category\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\controllers\\category\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|c:\\users\\pavlo\\source\\repos\\react-native\\backend\\pd421_web_api\\web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{06830CAD-0C9A-455C-9020-0B00A17A9DD0}|WEB_API\\WEB_API.csproj|solutionrelative:web_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,27 +30,55 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StorageService.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "RelativeToolTip": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T17:01:57.724Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "WEB_API\\Properties\\launchSettings.json",
               "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Properties\\launchSettings.json",
               "RelativeToolTip": "WEB_API\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-04T21:48:04.496Z"
+              "WhenOpened": "2026-03-14T16:38:55.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Controllers\\Category\\CategoryController.cs",
+              "RelativeDocumentMoniker": "WEB_API\\Controllers\\Category\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Controllers\\Category\\CategoryController.cs",
+              "RelativeToolTip": "WEB_API\\Controllers\\Category\\CategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T16:38:34.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API\\Program.cs",
               "RelativeDocumentMoniker": "WEB_API\\Program.cs",
@@ -63,39 +91,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:59:05.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Category\\CategoryService.cs",
               "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Category\\CategoryService.cs",
               "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Category\\CategoryService.cs",
               "RelativeToolTip": "WEB_API.BLL\\Services\\Category\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:58:48.318Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StorageService.cs",
-              "DocumentMoniker": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
-              "RelativeDocumentMoniker": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
-              "ToolTip": "C:\\Users\\pavlo\\source\\repos\\react-native\\backend\\PD421_WEB_API\\WEB_API.BLL\\Services\\Storage\\StorageService.cs",
-              "RelativeToolTip": "WEB_API.BLL\\Services\\Storage\\StorageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-04T20:56:46.913Z"
+              "WhenOpened": "2026-03-04T20:58:48.318Z",
+              "EditorCaption": ""
             }
           ]
         }

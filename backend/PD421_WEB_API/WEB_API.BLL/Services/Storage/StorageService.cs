@@ -7,9 +7,11 @@ namespace WEB_API.BLL.Services.Storage
         {
             try
             {
+                Console.WriteLine(file.ContentType);
                 var types = file.ContentType.Split('/');
                 if (types.Length != 2 || types[0] != "image")
                 {
+                    Console.WriteLine("BAD IMAGE");
                     return null;
                 }
 
@@ -23,12 +25,12 @@ namespace WEB_API.BLL.Services.Storage
                 {
                     await file.CopyToAsync(stream);
                 }
-
+                Console.WriteLine("IMAGE AT THE END " + imageName);
                 return imageName;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex);
+                Console.WriteLine("EXCEPTION: " + ex.Message);
                 return null;
             }
         }
