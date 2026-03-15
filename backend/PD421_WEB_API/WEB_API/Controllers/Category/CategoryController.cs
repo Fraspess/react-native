@@ -31,14 +31,19 @@ namespace WEB_API.Controllers.Category
         [HttpPost]
         public async Task<ServerResponse> Create([FromForm] CreateCategoryDTO dto)
         {
-            Console.WriteLine("DTO IMAGE :: " + dto.Image.FileName);
-            return await _categoryService.Create(dto, _webHostEnvironment.ContentRootPath);
+            return await _categoryService.Create(dto);
         }
 
         [HttpDelete]
         public async Task<ServerResponse> Delete([FromQuery] String id)
         {
             return await _categoryService.Delete(id);
+        }
+
+        [HttpPut]
+        public async Task<ServerResponse> Update([FromForm] UpdateCategoryDTO dto)
+        {
+            return await _categoryService.Update(dto);
         }
     }
 }

@@ -54,11 +54,14 @@ if (app.Environment.IsDevelopment())
 var path = Path.Combine(builder.Environment.ContentRootPath, "Images");
 Directory.CreateDirectory(path);
 
+StorageOptions.ImagesPath = path;
+
 app.UseStaticFiles(new StaticFileOptions
 {
     FileProvider = new PhysicalFileProvider(path),
     RequestPath = "/category-images"
 });
+
 
 //app.UseHttpsRedirection();
 

@@ -253,7 +253,6 @@ C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\swae.build.ex.cache
-C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\WEB_API.csproj.Up2Date
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\WEB_API.dll
 C:\Users\pavlo\source\repos\react-native\backend\PD421_WEB_API\WEB_API\obj\Debug\net8.0\refint\WEB_API.dll
