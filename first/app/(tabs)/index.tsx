@@ -13,6 +13,7 @@ import {IMAGES_URL} from "@/constants/urls";
 
 export default function HomeScreen() {
     const {data, isLoading} = useGetCategoriesQuery()
+    const [deleteMode, setDeleteMode] = useState(false);
 
     return (
         <ParallaxScrollView
