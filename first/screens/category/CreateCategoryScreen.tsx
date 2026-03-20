@@ -1,111 +1,99 @@
-import {Image} from 'expo-image';
-import {Alert, Button, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import FormLayout from "@/components/layouts/FormLayout";
+import {useForm, Controller} from 'react-hook-form';
+import {CreateCategoryFormData, createCategorySchema} from "@/schemas/categorySchema";
+import {zodResolver} from '@hookform/resolvers/zod';
+import CustomInput from "@/components/form/inputs/CustomInput";
+import {useRouter} from "expo-router";
+import {View} from "react-native";
+import PrimaryButton from "@/components/form/buttons/PrimaryButton";
+import AvatarPicker from "@/components/form/AvatarPicker";
+import {serialize} from "object-to-formdata";
+import {useCreateCategoryMutation} from "@/store/apis/categoryApi";
+import {ThemedText} from "@/components/themed-text";
+import {ICreateCategory} from "@/types/ICreateCategory";
 
-import {HelloWave} from '@/components/hello-wave';
-import ParallaxScrollView from '@/components/parallax-scroll-view';
-import {ThemedText} from '@/components/themed-text';
-import {ThemedView} from '@/components/themed-view';
-import {Link} from 'expo-router';
-import {useEffect, useState} from "react";
-import {ICategoryResponse} from "@/types/ICategoryResponse";
-import {useDeleteCategoryMutation, useGetCategoriesQuery} from "@/store/apis/categoryApi";
-import {IMAGES_URL} from "@/constants/urls";
 
-export default function HomeScreen() {
-    const {data, isLoading} = useGetCategoriesQuery()
-    const [deleteCategory] = useDeleteCategoryMutation();
+const CreateCategoryScreen = () => {
+    const router = useRouter();
+    const [createCategory, {isLoading}] = useCreateCategoryMutation();
 
-    const deleteHandler = (id: string) => {
-        try {
-            deleteCategory(id).unwrap();
+    const {control, handleSubmit, setValue, formState: {errors}} = useForm<CreateCategoryFormData>({
+        resolver: zodResolver(createCategorySchema),
+        defaultValues: {
+            name: '',
+            description: '',
+            image: undefined
         }
-        catch (e) {
-            console.log("error", e);
-        }
+    });
+
+    const onSubmit = async (data: CreateCategoryFormData) => {
+        const sendData: ICreateCategory = {
+            ...data
+        };
+
+        const response = await createCategory(sendData);
+        console.log("response", response);
+        control._reset();
+        router.push("/");
     }
 
 
-
     return (
-        <ParallaxScrollView
-            headerBackgroundColor={{light: '#A1CEDC', dark: '#1D3D47'}}
-            headerImage={
-                <Image
-                    source={require('@/assets/images/partial-react-logo.png')}
-                    style={styles.reactLogo}
+        <>
+            <FormLayout title="Welcome">
+                <Controller
+                    control={control}
+                    name="image"
+                    render={({field}) => (
+                        <AvatarPicker
+                            image={field.value?.uri || null}
+                            onChange={(fileObject) => setValue('image', fileObject)}
+                        />
+                    )}
                 />
-            }>
+                <ThemedText style={{color: "red", textAlign: "center"}}>{errors.image?.message as string}</ThemedText>
+                <Controller
+                    control={control}
+                    name="name"
+                    render={({field: {onChange, onBlur, value}}) => (
+                        <CustomInput
+                            label="Назва"
+                            placeholder="Назва категорії"
+                            onBlur={onBlur}
+                            onChangeText={onChange}
+                            value={value}
+                            error={errors.name?.message}
+                            autoCapitalize="none"
+                            keyboardType="email-address"
+                        />
+                    )}/>
+
+                <Controller
+                    control={control}
+                    name="description"
+                    render={({field: {onChange, onBlur, value}}) => (
+                        <CustomInput
+                            label="Опис"
+                            placeholder="Опис категорії"
+                            onBlur={onBlur}
+                            onChangeText={onChange}
+                            value={value}
+                            error={errors.description?.message}
+                        />
+                    )}
+                />
+
+                <View className={"items-center w-full mt-4"}>
+                    <PrimaryButton onPress={handleSubmit(onSubmit)} title={"Створити"}></PrimaryButton>
+                    <PrimaryButton
+                        title="Скасувати"
+                        variant="secondary"
+                        onPress={() => router.push('/')}
+                    />
+                </View>
+
+            </FormLayout>
+        </>)}
 
 
-
-            <ThemedView className="px-5 pt-5 flex-row flex-wrap justify-between">
-                {isLoading ? (
-                    <Text>Loading...</Text>
-                ) : (
-                    data?.map((category: ICategoryResponse) => (
-
-                        <View
-                            key={category.id}
-                            className="bg-white dark:bg-neutral-900 rounded-2xl shadow w-[48%] mb-4 overflow-hidden"
-                        >
-                            <Image
-                                source={{ uri: IMAGES_URL + `/${category.image}` }}
-                                contentFit="cover"
-                                style={{ width: '100%', height: 128 }}
-                                onError={(e) => console.log('Image error:', e)}
-                            />
-
-                            <View className="p-3">
-                                <Text className="font-bold text-base dark:text-white">
-                                    {category.name}
-                                </Text>
-                                <Text className="text-gray-500 text-sm mt-1" numberOfLines={3}>
-                                    {category.description}
-                                </Text>
-                                <TouchableOpacity className="py-3 rounded-full bg-red-600"
-                                                  onPress={() => {
-                                                      Alert.alert(
-                                                          "Delete Category",
-                                                          `Delete "${category.name}"?`,
-                                                          [
-                                                              { text: "Cancel", style: "cancel" },
-                                                              {
-                                                                  text: "Delete",
-                                                                  style: "destructive",
-                                                                  onPress: () => deleteHandler(category.id),
-                                                              },
-                                                          ]
-                                                      );
-                                                  }}
-                                >
-                                    <Text className={"text-white text-center"}>Видалити</Text>
-                                </TouchableOpacity>
-
-                            </View>
-                        </View>
-                    ))
-                )}
-            </ThemedView>
-
-        </ParallaxScrollView>
-    );
-}
-
-const styles = StyleSheet.create({
-    titleContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: 8,
-    },
-    stepContainer: {
-        gap: 8,
-        marginBottom: 8,
-    },
-    reactLogo: {
-        height: 28,
-        width: 290,
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-    },
-});
+export default CreateCategoryScreen;

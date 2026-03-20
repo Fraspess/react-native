@@ -1,5 +1,5 @@
 import {Image} from 'expo-image';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Alert, Button, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import {HelloWave} from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
@@ -8,12 +8,23 @@ import {ThemedView} from '@/components/themed-view';
 import {Link} from 'expo-router';
 import {useEffect, useState} from "react";
 import {ICategoryResponse} from "@/types/ICategoryResponse";
-import {useGetCategoriesQuery} from "@/store/apis/categoryApi";
+import {useDeleteCategoryMutation, useGetCategoriesQuery} from "@/store/apis/categoryApi";
 import {IMAGES_URL} from "@/constants/urls";
 
 export default function HomeScreen() {
     const {data, isLoading} = useGetCategoriesQuery()
-    const [deleteMode, setDeleteMode] = useState(false);
+    const [deleteCategory] = useDeleteCategoryMutation();
+
+    const deleteHandler = (id: string) => {
+        try {
+            deleteCategory(id).unwrap();
+        }
+        catch (e) {
+            console.log("error", e);
+        }
+    }
+
+
 
     return (
         <ParallaxScrollView
@@ -24,62 +35,8 @@ export default function HomeScreen() {
                     style={styles.reactLogo}
                 />
             }>
-            <ThemedView style={styles.titleContainer}>
-                <Text className="font-medium text-sky-500">WELCOME FGKSKGKSDGGS KSDFGKGSKGSK GHJSDGJKSKGSJKG</Text>
-                <HelloWave/>
-            </ThemedView>
-            <ThemedView style={styles.stepContainer}>
-                <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-                <ThemedText>
-                    <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText>
-                    <ThemedText type="defaultSemiBold">
-                        {Platform.select({
-                            ios: 'cmd + d',
-                            android: 'cmd + m',
-                            web: 'F12',
-                        })}
-                    </ThemedText>{' '}
-                    to open developer tools.
-                </ThemedText>
-            </ThemedView>
-            <ThemedView style={styles.stepContainer}>
-                <Link href="/modal">
-                    <Link.Trigger>
-                        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-                    </Link.Trigger>
-                    <Link.Preview/>
-                    <Link.Menu>
-                        <Link.MenuAction title="Action" icon="cube" onPress={() => alert('Action pressed')}/>
-                        <Link.MenuAction
-                            title="Share"
-                            icon="square.and.arrow.up"
-                            onPress={() => alert('Share pressed')}
-                        />
-                        <Link.Menu title="More" icon="ellipsis">
-                            <Link.MenuAction
-                                title="Delete"
-                                icon="trash"
-                                destructive
-                                onPress={() => alert('Delete pressed')}
-                            />
-                        </Link.Menu>
-                    </Link.Menu>
-                </Link>
 
-                <ThemedText>
-                    {`Tap the Explore tab to learn more about what's included in this starter app.`}
-                </ThemedText>
-            </ThemedView>
-            <ThemedView style={styles.stepContainer}>
-                <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-                <ThemedText>
-                    {`When you're ready, run `}
-                    <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-                    <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-                    <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-                    <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-                </ThemedText>
-            </ThemedView>
+
 
             <ThemedView className="px-5 pt-5 flex-row flex-wrap justify-between">
                 {isLoading ? (
@@ -105,6 +62,25 @@ export default function HomeScreen() {
                                 <Text className="text-gray-500 text-sm mt-1" numberOfLines={3}>
                                     {category.description}
                                 </Text>
+                                <TouchableOpacity className="py-3 rounded-full bg-red-600"
+                                                  onPress={() => {
+                                                      Alert.alert(
+                                                          "Delete Category",
+                                                          `Delete "${category.name}"?`,
+                                                          [
+                                                              { text: "Cancel", style: "cancel" },
+                                                              {
+                                                                  text: "Delete",
+                                                                  style: "destructive",
+                                                                  onPress: () => deleteHandler(category.id),
+                                                              },
+                                                          ]
+                                                      );
+                                                  }}
+                                >
+                                    <Text className={"text-white text-center"}>Видалити</Text>
+                                </TouchableOpacity>
+
                             </View>
                         </View>
                     ))
@@ -126,7 +102,7 @@ const styles = StyleSheet.create({
         marginBottom: 8,
     },
     reactLogo: {
-        height: 178,
+        height: 28,
         width: 290,
         bottom: 0,
         left: 0,
