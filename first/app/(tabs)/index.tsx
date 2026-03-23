@@ -5,7 +5,7 @@ import {HelloWave} from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import {ThemedText} from '@/components/themed-text';
 import {ThemedView} from '@/components/themed-view';
-import {Link} from 'expo-router';
+import {Link, router} from 'expo-router';
 import {useEffect, useState} from "react";
 import {ICategoryResponse} from "@/types/ICategoryResponse";
 import {useDeleteCategoryMutation, useGetCategoriesQuery} from "@/store/apis/categoryApi";
@@ -62,6 +62,18 @@ export default function HomeScreen() {
                                 <Text className="text-gray-500 text-sm mt-1" numberOfLines={3}>
                                     {category.description}
                                 </Text>
+
+                                <TouchableOpacity className="py-3 rounded-full bg-blue-600"
+                                                  onPress={() => {
+                                                    router.push({
+                                                        pathname:"/update-category",
+                                                        params: {id : category.id}
+                                                    })
+                                                  }}
+                                >
+                                    <Text className={"text-white text-center"}>Редагувати</Text>
+                                </TouchableOpacity>
+
                                 <TouchableOpacity className="py-3 rounded-full bg-red-600"
                                                   onPress={() => {
                                                       Alert.alert(
