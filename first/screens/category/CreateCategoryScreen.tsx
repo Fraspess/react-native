@@ -11,14 +11,13 @@ import {serialize} from "object-to-formdata";
 import {useCreateCategoryMutation} from "@/store/apis/categoryApi";
 import {ThemedText} from "@/components/themed-text";
 import {ICreateCategory} from "@/types/ICreateCategory";
-import {useEffect} from "react";
 
 
 const CreateCategoryScreen = () => {
     const router = useRouter();
     const [createCategory, {isLoading}] = useCreateCategoryMutation();
 
-    const {control, handleSubmit, setValue, reset, formState: {errors}} = useForm<CreateCategoryFormData>({
+    const {control, handleSubmit, setValue, formState: {errors}} = useForm<CreateCategoryFormData>({
         resolver: zodResolver(createCategorySchema),
         defaultValues: {
             name: '',
@@ -37,10 +36,6 @@ const CreateCategoryScreen = () => {
         control._reset();
         router.push("/");
     }
-
-    useEffect(() => {
-        reset();
-    }, []);
 
 
     return (
