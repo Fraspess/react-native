@@ -1,10 +1,13 @@
 
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using WEB_API.BLL.Services;
 using WEB_API.BLL.Services.Category;
 using WEB_API.BLL.Services.Storage;
 using WEB_API.Controllers.Category;
 using WEB_API.DAL;
+using WEB_API.DAL.Entities.Identity;
 using WEB_API.DAL.Repositories.Category;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,9 +33,21 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services
+    .AddIdentity<UserEntity, RoleEntity>(options =>
+    {
+        options.Password.RequiredLength = 6;
+        options.Password.RequireDigit = false;
+        options.Password.RequireLowercase = false;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ICategoryService,CategoryService>();
-builder.Services.AddSingleton<IStorageService, StorageService>();
+builder.Services.AddScoped<IStorageService, StorageService>();
 
 builder.Services.AddAutoMapper(cfg =>
 {
@@ -67,9 +82,7 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-using var scope = app.Services.CreateScope();
-var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-context.Database.Migrate();
 
+await app.SeedDataAsync();
 
 app.Run();

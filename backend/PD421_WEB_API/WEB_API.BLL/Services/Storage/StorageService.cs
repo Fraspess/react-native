@@ -1,29 +1,44 @@
 ﻿using Microsoft.AspNetCore.Http;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 namespace WEB_API.BLL.Services.Storage
 {
     public class StorageService : IStorageService
     {
+        private readonly HttpClient _httpClient = new HttpClient(); 
         public async Task<string?> SaveImageAsync(IFormFile file)
         {
+            string baseFolder = Path.Combine(StorageOptions.ImagesPath);
+            string imageName = $"{Guid.NewGuid()}" + ".webp";
+            string imagePath = Path.Combine(baseFolder, imageName);
             try
             {
-                var types = file.ContentType.Split('/');
-                if (types.Length != 2 || types[0] != "image")
-                {
-                    Console.WriteLine("BAD IMAGE");
-                    return null;
-                }
+                var stream = file.OpenReadStream();
 
-                string baseFolder = Path.Combine(StorageOptions.ImagesPath);
-                Directory.CreateDirectory(baseFolder);
-                string extension = Path.GetExtension(file.FileName);
-                string imageName = $"{Guid.NewGuid()}{extension}";
-                string imagePath = Path.Combine(baseFolder, imageName);
+                using (Image image = Image.Load(stream))
+                    image.SaveAsWebp(imagePath);
 
-                using (var stream = File.Create(imagePath))
-                {
-                    await file.CopyToAsync(stream);
-                }
+                return imageName;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("EXCEPTION: " + ex.Message);
+                return null;
+            }
+        }
+
+        public async Task<string?> SaveImageAsync(String url)
+        {
+            string baseFolder = Path.Combine(StorageOptions.ImagesPath);
+            string imageName = $"{Guid.NewGuid()}" + ".webp";
+            string imagePath = Path.Combine(baseFolder, imageName);
+            try
+            {                
+                var stream = await _httpClient.GetStreamAsync(url);
+
+                using (Image image = Image.Load(stream))
+                    image.SaveAsWebp(imagePath);
+
                 return imageName;
             }
             catch (Exception ex)
@@ -40,16 +55,23 @@ namespace WEB_API.BLL.Services.Storage
             return results.Where(res => res != null)!;
         }
 
-        public async Task DeleteImageAsync(string imagePath)
+        public async Task<IEnumerable<string>> SaveImagesAsync(IEnumerable<String> urls)
         {
-            Console.WriteLine(imagePath);
-            if (File.Exists(imagePath))
+            var tasks = urls.Select(SaveImageAsync);
+            var results = await Task.WhenAll(tasks);
+            return results.Where(res => res != null)!;
+        }
+
+        public async Task DeleteImageAsync(string imageName)
+        {
+            var path = Path.Combine(StorageOptions.ImagesPath, imageName);
+            if (File.Exists(path))
             {
                 try
                 {
                     await Task.Run(() =>
                     {
-                        File.Delete(imagePath);
+                        File.Delete(path);
                     });
                 }
                 catch (Exception ex)
