@@ -40,7 +40,7 @@ const CreateCategoryScreen = () => {
 
     return (
         <>
-            <FormLayout title="Welcome">
+            <FormLayout title="Create category">
                 <Controller
                     control={control}
                     name="image"

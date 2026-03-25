@@ -6,9 +6,9 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using WEB_API.BLL.Services;
+using WEB_API.BLL.Services.Auth;
 using WEB_API.BLL.Services.Category;
 using WEB_API.BLL.Services.Storage;
-using WEB_API.Controllers.Category;
 using WEB_API.DAL;
 using WEB_API.DAL.Entities.Identity;
 using WEB_API.DAL.Repositories.Category;
@@ -49,8 +49,9 @@ builder.Services
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService,CategoryService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IStorageService, StorageService>();
+builder.Services.AddScoped<IJWTTokenService, JWTTokenService>();
 
 builder.Services.AddAutoMapper(cfg =>
 {

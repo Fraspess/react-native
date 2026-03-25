@@ -1,6 +1,5 @@
 import FormLayout from "@/components/layouts/FormLayout";
 import {useForm, Controller} from 'react-hook-form';
-import {CreateCategoryFormData, createCategorySchema} from "@/schemas/categorySchema";
 import {zodResolver} from '@hookform/resolvers/zod';
 import CustomInput from "@/components/form/inputs/CustomInput";
 import {useLocalSearchParams, useRouter} from "expo-router";
@@ -8,7 +7,12 @@ import {Text, TextInput, View} from "react-native";
 import PrimaryButton from "@/components/form/buttons/PrimaryButton";
 import AvatarPicker from "@/components/form/AvatarPicker";
 import {serialize} from "object-to-formdata";
-import {useCreateCategoryMutation, useGetByIdQuery, useUpdateCategoryMutation} from "@/store/apis/categoryApi";
+import {
+    useCreateCategoryMutation,
+    useGetByIdQuery,
+    useGetCategoriesQuery,
+    useUpdateCategoryMutation
+} from "@/store/apis/categoryApi";
 import {ThemedText} from "@/components/themed-text";
 import {ICreateCategory} from "@/types/ICreateCategory";
 import {UpdateCategorySchema, updateCategorySchema} from "@/schemas/updateCategorySchema";
@@ -21,11 +25,14 @@ import {IMAGES_URL} from "@/constants/urls";
 const UpdateCategoryScreen = () => {
     const router = useRouter();
     const [updateCategory] = useUpdateCategoryMutation();
+    const {id} = useLocalSearchParams();
+    const {data} = useGetByIdQuery(id as string);
 
 
     const {control, handleSubmit, reset, setValue, formState: {errors}} = useForm<UpdateCategorySchema>({
         resolver: zodResolver(updateCategorySchema),
         defaultValues: {
+            id: "",
             name: '',
             description: '',
             image: undefined
@@ -39,29 +46,28 @@ const UpdateCategoryScreen = () => {
 
         const response = await updateCategory(sendData);
         console.log("response", response);
-        control._reset();
+        reset();
         router.push("/");
     }
-    const category = useLocalSearchParams();
+
 
     useEffect(() => {
+        if(data){
         reset({
-            name: category.name,
-            description: category.description,
-            image: {
-                uri: IMAGES_URL + "/" + category.image,
-                name: category.image,
-                type: 'image/jpeg',
-            }
+            id: id as string,
+            name: data.data.name,
+            description: data.data.description,
+            image:{uri:`${IMAGES_URL }/${data.data.image} `},
         });
 
-    }, []);
+        }
+
+    }, [data]);
 
 
     return (
         <>
             <FormLayout title="Welcome">
-                <TextInput value={category.id}></TextInput>
                 <Controller
                     control={control}
                     name="image"
@@ -105,7 +111,7 @@ const UpdateCategoryScreen = () => {
                 />
 
                 <View className={"items-center w-full mt-4"}>
-                    <PrimaryButton onPress={handleSubmit(onSubmit)} title={"Оновити"}></PrimaryButton>
+                    <PrimaryButton  onPress={handleSubmit(onSubmit, (errors) => console.log("Validation errors:", errors))} title={"Оновити"}></PrimaryButton>
                     <PrimaryButton
                         title="Скасувати"
                         variant="secondary"
