@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62aae43f-ddce-4381-9442-d88bd1f439b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../backend/PD421_WEB_API/WEB_API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../backend/PD421_WEB_API/WEB_API/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="62aae43f-ddce-4381-9442-d88bd1f439b2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +91,7 @@
       <workItem from="1774034201724" duration="33000" />
       <workItem from="1774193153189" duration="5416000" />
       <workItem from="1774457343432" duration="5017000" />
+      <workItem from="1774794852159" duration="1727000" />
     </task>
     <servers />
   </component>

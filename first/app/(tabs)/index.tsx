@@ -37,6 +37,7 @@ export default function HomeScreen() {
             }>
 
             <Button onPress={() => router.push("/login")} title={"Login"}></Button>
+            <Button onPress={() => router.push("/register")} title={"Register"}></Button>
 
             <ThemedView className="px-5 pt-5 flex-row flex-wrap justify-between">
                 {isLoading ? (
