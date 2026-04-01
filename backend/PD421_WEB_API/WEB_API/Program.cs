@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
 using System.Text;
@@ -46,7 +47,33 @@ try
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+    builder.Services.AddSwaggerGen(opt =>
+    {
+        opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+        {
+            Type = SecuritySchemeType.Http,
+            Scheme = "Bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description = "JWT Authorization header using the Bearer scheme."
+        });
+
+        opt.AddSecurityRequirement(new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                {
+                    Reference = new OpenApiReference
+                    {
+                        Type = ReferenceType.SecurityScheme,
+                        Id = "Bearer"
+                    }
+                },
+                Array.Empty<string>()
+            }
+        });
+
+    });
 
     builder.Services.AddDbContext<AppDbContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -69,6 +96,8 @@ try
     builder.Services.AddScoped<ICategoryService, CategoryService>();
     builder.Services.AddScoped<IStorageService, StorageService>();
     builder.Services.AddScoped<IJWTTokenService, JWTTokenService>();
+    builder.Services.AddScoped<IIdentityService, IdentityService>();
+    builder.Services.AddScoped<IAuthService, AuthService>();
     //builder.Services.AddTransient<IJWTTokenService, JWTTokenService>();
 
     builder.Services.AddAutoMapper(cfg =>
@@ -94,9 +123,27 @@ try
             ValidateAudience = false,
             ValidateIssuerSigningKey = true,
             ValidateLifetime = true,
-            ClockSkew = TimeSpan.Zero,
             IssuerSigningKey = new SymmetricSecurityKey(
                 Encoding.UTF8.GetBytes(builder.Configuration["JWT:Key"]!))
+        };
+
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                Console.WriteLine("❌ Auth failed: " + context.Exception.Message);
+                return Task.CompletedTask;
+            },
+            OnTokenValidated = context =>
+            {
+                Console.WriteLine("✅ Token valid for: " + context.Principal?.Identity?.Name);
+                return Task.CompletedTask;
+            },
+            OnChallenge = context =>
+            {
+                Console.WriteLine("⚠️ Challenge - no token or invalid: " + context.Error);
+                return Task.CompletedTask;
+            }
         };
 
     });
@@ -128,6 +175,7 @@ try
 
     //app.UseHttpsRedirection();
 
+    app.UseAuthentication();
     app.UseAuthorization();
 
     app.MapControllers();

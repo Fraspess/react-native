@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WEB_API.BLL.Constants;
 using WEB_API.BLL.Dtos.Auth;
@@ -12,7 +13,9 @@ namespace WEB_API.Controllers.Auth;
 [ApiController]
 public class AuthController(UserManager<UserEntity> userManager,
     IJWTTokenService tokenService, RoleManager<RoleEntity> roleManager,
-    IStorageService storage) : ControllerBase
+    IStorageService storage,
+    IAuthService authService
+    ) : ControllerBase
 {
     [HttpPost]
     public async Task<IActionResult> Login([FromBody] LoginDTO model)
@@ -56,8 +59,13 @@ public class AuthController(UserManager<UserEntity> userManager,
             Console.WriteLine("------ ERROR WHEN CREATING USER: ");
             return BadRequest(result.Errors);
         }
+    }
 
 
-
+    [HttpGet]
+    [Authorize]
+    public async Task<IActionResult> GetMyProfile()
+    {
+        return Ok(await authService.GetUserInfoAsync());
     }
 }

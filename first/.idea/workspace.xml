@@ -13,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -62,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\pavlo\source\repos\react-native\first\store" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -92,6 +97,8 @@
       <workItem from="1774193153189" duration="5416000" />
       <workItem from="1774457343432" duration="5017000" />
       <workItem from="1774794852159" duration="1727000" />
+      <workItem from="1774796754172" duration="72000" />
+      <workItem from="1775059954142" duration="6548000" />
     </task>
     <servers />
   </component>

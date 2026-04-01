@@ -36,6 +36,7 @@ export default function HomeScreen() {
                 />
             }>
 
+            <Button onPress={() => router.push("/profile")} title={"Profile"}></Button>
             <Button onPress={() => router.push("/login")} title={"Login"}></Button>
             <Button onPress={() => router.push("/register")} title={"Register"}></Button>
 
